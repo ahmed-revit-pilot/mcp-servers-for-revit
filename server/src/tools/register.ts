@@ -11,14 +11,15 @@ export async function registerTools(server: McpServer) {
   // 读取tools目录下的所有文件
   const files = fs.readdirSync(__dirname);
 
-  // 过滤出.ts或.js文件，但排除index文件和register文件
+  // 过滤出.ts或.js文件，但排除index文件、register文件和测试文件
   const toolFiles = files.filter(
     (file) =>
       (file.endsWith(".ts") || file.endsWith(".js")) &&
       file !== "index.ts" &&
       file !== "index.js" &&
       file !== "register.ts" &&
-      file !== "register.js"
+      file !== "register.js" &&
+      !/\.test\.(ts|js)$/.test(file)
   );
 
   // 动态导入并注册每个工具
