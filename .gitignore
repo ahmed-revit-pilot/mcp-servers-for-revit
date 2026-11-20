@@ -371,3 +371,6 @@ FodyWeavers.xsd
 # =============================================================================
 .claude/
 .DS_Store
+
+# Root npm workspace (package.json at the repository root)
+/node_modules/

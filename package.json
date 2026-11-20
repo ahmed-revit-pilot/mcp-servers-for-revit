@@ -1,0 +1,8 @@
+{
+  "name": "mcp-servers-for-revit-workspace",
+  "private": true,
+  "description": "Root workspace so tools that read the repository root find the TypeScript MCP server in server/.",
+  "workspaces": [
+    "server"
+  ]
+}
