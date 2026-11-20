@@ -14,6 +14,7 @@
         "clean": "rimraf build",
         "prebuild": "npm run clean",
         "build": "tsc",
+        "test": "tsc && node --test build/tools/store_project_data.test.js build/tools/store_room_data.test.js",
         "prepublishOnly": "npm run build"
     },
     "files": [
