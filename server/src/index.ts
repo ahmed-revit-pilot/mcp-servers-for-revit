@@ -8,15 +8,15 @@ const { version } = createRequire(import.meta.url)("../package.json") as {
   version: string;
 };
 
-// 创建服务器实例
+// Create the server instance
 const server = new McpServer({
   name: "mcp-server-for-revit",
   version,
 });
 
-// 启动服务器
+// Start the server
 async function main() {
-  // 注册工具
+  // Register tools
   await registerTools(server);
 
   // 连接到传输层
