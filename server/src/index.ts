@@ -19,7 +19,7 @@ async function main() {
   // Register tools
   await registerTools(server);
 
-  // 连接到传输层
+  // Connect to the transport layer
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error("Revit MCP Server start success");
