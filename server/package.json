@@ -14,11 +14,12 @@
         "clean": "rimraf build",
         "prebuild": "npm run clean",
         "build": "tsc",
-        "test": "tsc && node --test build/tools/store_project_data.test.js build/tools/store_room_data.test.js",
+        "test": "tsc && node --test --test-concurrency=1 build/tools/*.test.js",
         "prepublishOnly": "npm run build"
     },
     "files": [
         "build",
+        "!build/**/*.test.js",
         "README.md"
     ],
     "repository": {
