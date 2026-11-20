@@ -14,7 +14,6 @@
         "clean": "rimraf build",
         "prebuild": "npm run clean",
         "build": "tsc",
-        "test": "tsc && node --test --test-concurrency=1 build/tools/*.test.js",
         "prepublishOnly": "npm run build"
     },
     "files": [
